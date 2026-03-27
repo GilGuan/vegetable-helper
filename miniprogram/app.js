@@ -1,3 +1,5 @@
+const config = require('./config');
+
 App({
   globalData: {
     province: '广东省',
@@ -8,7 +10,7 @@ App({
     // 初始化云开发
     if (wx.cloud) {
       wx.cloud.init({
-        env: 'cloud1-3g2roojo47942c4d',
+        env: config.cloudEnvId,
         traceUser: true
       });
     }
