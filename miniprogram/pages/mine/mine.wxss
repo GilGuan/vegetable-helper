@@ -1,0 +1,148 @@
+.container {
+  min-height: 100vh;
+  background-color: #FFF8E1;
+}
+
+/* 用户信息 */
+.user-section {
+  display: flex;
+  align-items: center;
+  background-color: #4CAF50;
+  padding: 60rpx 30rpx 40rpx;
+  color: #ffffff;
+}
+
+.user-avatar {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 60rpx;
+  background-color: rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 60rpx;
+  margin-right: 30rpx;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-name {
+  font-size: 36rpx;
+  font-weight: 500;
+  margin-bottom: 12rpx;
+}
+
+.location-picker {
+  display: flex;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 8rpx 20rpx;
+  border-radius: 30rpx;
+}
+
+.location-icon {
+  font-size: 24rpx;
+  margin-right: 8rpx;
+}
+
+.location-text {
+  font-size: 24rpx;
+  margin-right: 8rpx;
+}
+
+.location-arrow {
+  font-size: 18rpx;
+  opacity: 0.8;
+}
+
+picker {
+  display: flex;
+  align-items: center;
+}
+
+/* 统计卡片 */
+.stats-section {
+  display: flex;
+  justify-content: space-around;
+  background-color: #ffffff;
+  margin: -30rpx 20rpx 20rpx;
+  border-radius: 16rpx;
+  padding: 40rpx 20rpx;
+  box-shadow: 0 4rpx 16rpx rgba(0, 0, 0, 0.1);
+}
+
+.stat-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stat-value {
+  font-size: 48rpx;
+  font-weight: 500;
+  color: #4CAF50;
+  margin-bottom: 8rpx;
+}
+
+.stat-label {
+  font-size: 24rpx;
+  color: #999999;
+}
+
+/* 菜单列表 */
+.menu-section {
+  background-color: #ffffff;
+  margin: 20rpx;
+  border-radius: 16rpx;
+  overflow: hidden;
+  box-shadow: 0 2rpx 8rpx rgba(0, 0, 0, 0.1);
+}
+
+.menu-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30rpx;
+  border-bottom: 1rpx solid #EEEEEE;
+}
+
+.menu-item:last-child {
+  border-bottom: none;
+}
+
+.menu-left {
+  display: flex;
+  align-items: center;
+}
+
+.menu-icon {
+  font-size: 36rpx;
+  margin-right: 20rpx;
+}
+
+.menu-name {
+  font-size: 30rpx;
+  color: #333333;
+}
+
+.menu-arrow {
+  font-size: 28rpx;
+  color: #CCCCCC;
+}
+
+/* 关于 */
+.about-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60rpx 0;
+}
+
+.about-text {
+  font-size: 24rpx;
+  color: #CCCCCC;
+  margin-bottom: 8rpx;
+}

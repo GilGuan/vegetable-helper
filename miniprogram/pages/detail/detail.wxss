@@ -1,0 +1,248 @@
+.container {
+  min-height: 100vh;
+  background-color: #FFF8E1;
+  padding-bottom: 120rpx;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400rpx;
+  color: #999999;
+}
+
+/* 作物信息 */
+.crop-header {
+  display: flex;
+  align-items: center;
+  background-color: #4CAF50;
+  padding: 40rpx 30rpx;
+  color: #ffffff;
+}
+
+.crop-icon-wrapper {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 16rpx;
+  background-color: rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 24rpx;
+}
+
+.crop-icon {
+  width: 80rpx;
+  height: 80rpx;
+}
+
+.crop-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.crop-name {
+  font-size: 40rpx;
+  font-weight: 500;
+  margin-bottom: 8rpx;
+}
+
+.crop-category {
+  font-size: 24rpx;
+  opacity: 0.8;
+}
+
+/* 信息卡片 */
+.info-cards {
+  display: flex;
+  justify-content: space-around;
+  background-color: #ffffff;
+  padding: 30rpx 20rpx;
+  margin: 20rpx;
+  border-radius: 16rpx;
+  box-shadow: 0 2rpx 8rpx rgba(0, 0, 0, 0.1);
+}
+
+.info-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.info-label {
+  font-size: 24rpx;
+  color: #999999;
+  margin-bottom: 10rpx;
+}
+
+.info-value {
+  font-size: 28rpx;
+  color: #333333;
+  font-weight: 500;
+}
+
+/* 区块 */
+.section {
+  background-color: #ffffff;
+  margin: 20rpx;
+  border-radius: 16rpx;
+  padding: 30rpx;
+  box-shadow: 0 2rpx 8rpx rgba(0, 0, 0, 0.1);
+}
+
+.section-title {
+  font-size: 32rpx;
+  font-weight: 500;
+  color: #333333;
+  margin-bottom: 20rpx;
+}
+
+/* 步骤 */
+.steps-container {
+  border-left: 2rpx solid #E0E0E0;
+  padding-left: 20rpx;
+}
+
+.step-item {
+  position: relative;
+  padding: 20rpx 0;
+  padding-left: 30rpx;
+}
+
+.step-item::before {
+  content: '';
+  position: absolute;
+  left: -11rpx;
+  top: 28rpx;
+  width: 20rpx;
+  height: 20rpx;
+  border-radius: 50%;
+  background-color: #81C784;
+}
+
+.step-item.active::before {
+  background-color: #4CAF50;
+}
+
+.step-header {
+  display: flex;
+  align-items: center;
+}
+
+.step-number {
+  width: 40rpx;
+  height: 40rpx;
+  border-radius: 50%;
+  background-color: #81C784;
+  color: #ffffff;
+  font-size: 24rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 16rpx;
+}
+
+.step-item.active .step-number {
+  background-color: #4CAF50;
+}
+
+.step-title {
+  font-size: 30rpx;
+  color: #333333;
+  font-weight: 500;
+}
+
+.step-content {
+  margin-top: 16rpx;
+  padding: 16rpx;
+  background-color: #f5f5f5;
+  border-radius: 8rpx;
+}
+
+.step-desc {
+  font-size: 26rpx;
+  color: #666666;
+  line-height: 1.6;
+  display: block;
+}
+
+.step-duration {
+  display: block;
+  font-size: 24rpx;
+  color: #4CAF50;
+  margin-top: 10rpx;
+}
+
+.step-tips {
+  margin-top: 16rpx;
+}
+
+.tips-title {
+  font-size: 24rpx;
+  color: #333333;
+  display: block;
+  margin-bottom: 8rpx;
+}
+
+.step-tips .tip-item {
+  display: block;
+  font-size: 24rpx;
+  color: #666666;
+  line-height: 1.6;
+}
+
+/* 注意事项 */
+.tips-list .tip-item {
+  font-size: 26rpx;
+  color: #666666;
+  line-height: 2;
+}
+
+/* 常见问题 */
+.faq-item {
+  padding: 20rpx 0;
+  border-bottom: 1rpx solid #EEEEEE;
+}
+
+.faq-item:last-child {
+  border-bottom: none;
+}
+
+.faq-question {
+  display: block;
+  font-size: 28rpx;
+  color: #333333;
+  font-weight: 500;
+  margin-bottom: 10rpx;
+}
+
+.faq-answer {
+  display: block;
+  font-size: 26rpx;
+  color: #666666;
+  line-height: 1.6;
+}
+
+/* 底部按钮 */
+.bottom-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #ffffff;
+  padding: 20rpx 30rpx;
+  box-shadow: 0 -2rpx 8rpx rgba(0, 0, 0, 0.1);
+}
+
+.plant-btn {
+  width: 100%;
+  height: 88rpx;
+  background-color: #4CAF50;
+  color: #ffffff;
+  font-size: 32rpx;
+  border-radius: 44rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

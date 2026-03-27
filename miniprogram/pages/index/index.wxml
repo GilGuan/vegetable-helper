@@ -1,0 +1,73 @@
+<view class="container">
+  <!-- 省份选择 -->
+  <province-picker 
+    current-province="{{province}}" 
+    bind:change="onProvinceChange"
+  />
+
+  <!-- 当前月份推荐 -->
+  <view class="section">
+    <view class="section-header">
+      <text class="section-title">🌱 {{currentMonth}}月适合种植</text>
+      <text class="view-more" bindtap="onViewMore">查看更多 ></text>
+    </view>
+
+    <view class="crop-list" wx:if="{{!loading && recommendedCrops.length > 0}}">
+      <crop-card 
+        wx:for="{{recommendedCrops}}" 
+        wx:key="_id" 
+        crop="{{item}}" 
+        province="{{province}}"
+        bind:tap="onCropTap"
+      />
+    </view>
+
+    <view class="loading" wx:if="{{loading}}">
+      <text>加载中...</text>
+    </view>
+
+    <view class="empty-state" wx:if="{{!loading && recommendedCrops.length === 0}}">
+      <text>当前月份暂无推荐作物</text>
+    </view>
+  </view>
+
+  <!-- 快速入口 -->
+  <view class="section">
+    <view class="section-header">
+      <text class="section-title">快速入口</text>
+    </view>
+    <view class="quick-links">
+      <view 
+        class="quick-link-item" 
+        wx:for="{{quickLinks}}" 
+        wx:key="id"
+        data-url="{{item.url}}"
+        bindtap="onQuickLinkTap"
+      >
+        <view class="quick-link-icon">{{item.icon}}</view>
+        <text class="quick-link-name">{{item.name}}</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 种植小贴士 -->
+  <view class="section tips-section">
+    <view class="section-header">
+      <text class="section-title">💡 种植小贴士</text>
+    </view>
+    <view class="tips-content">
+      <view class="tip-item">
+        <text>• 选择适合当地气候的作物品种</text>
+      </view>
+      <view class="tip-item">
+        <text>• 保持土壤湿润但不要积水</text>
+      </view>
+      <view class="tip-item">
+        <text>• 定期除草和松土</text>
+      </view>
+      <view class="tip-item">
+        <text>• 注意观察作物生长情况</text>
+      </view>
+    </view>
+  </view>
+</view>

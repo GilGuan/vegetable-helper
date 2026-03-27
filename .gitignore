@@ -1,0 +1,19 @@
+# 依赖
+node_modules/
+
+# 微信开发者工具
+.DS_Store
+project.private.config.json
+
+# 云函数临时文件
+cloudfunctions/*/node_modules/
+
+# 日志
+*.log
+
+# IDE
+.idea/
+.vscode/
+
+# 系统文件
+Thumbs.db

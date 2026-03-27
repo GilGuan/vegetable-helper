@@ -1,0 +1,9 @@
+{
+  "name": "userSettings",
+  "version": "1.0.0",
+  "description": "用户设置（获取和更新）",
+  "main": "index.js",
+  "dependencies": {
+    "wx-server-sdk": "~2.6.3"
+  }
+}

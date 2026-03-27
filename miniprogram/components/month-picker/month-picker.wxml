@@ -1,0 +1,15 @@
+<view class="month-picker">
+  <scroll-view scroll-x class="scroll-view">
+    <view class="month-list">
+      <view 
+        class="month-item {{selected === month ? 'active' : ''}}" 
+        wx:for="{{months}}" 
+        wx:key="*this" 
+        data-month="{{item}}"
+        bindtap="onMonthTap"
+      >
+        <text>{{item}}月</text>
+      </view>
+    </view>
+  </scroll-view>
+</view>

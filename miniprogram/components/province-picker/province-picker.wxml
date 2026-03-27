@@ -1,0 +1,14 @@
+<view class="province-picker">
+  <view class="location-bar" bindtap="onTap">
+    <text class="location-icon">📍</text>
+    <picker 
+      mode="selector" 
+      range="{{provinces}}" 
+      value="{{provinceIndex}}" 
+      bindchange="onPickerChange"
+    >
+      <text class="province-text">{{currentProvince}}</text>
+      <text class="arrow">▼</text>
+    </picker>
+  </view>
+</view>

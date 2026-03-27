@@ -1,0 +1,13 @@
+<view class="crop-card" bindtap="onTap">
+  <view class="crop-icon-wrapper">
+    <image class="crop-icon" src="{{crop.icon}}" mode="aspectFit" />
+  </view>
+  <view class="crop-info">
+    <text class="crop-name">{{crop.name}}</text>
+    <text class="crop-category">{{crop.category}}</text>
+    <view class="crop-detail" wx:if="{{showMonth && monthText}}">
+      <text class="crop-months">适宜: {{monthText}}</text>
+    </view>
+    <text class="crop-difficulty">难度: {{crop.difficulty}}</text>
+  </view>
+</view>

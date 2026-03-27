@@ -1,0 +1,36 @@
+.month-picker {
+  padding: 20rpx 0;
+}
+
+.scroll-view {
+  width: 100%;
+  white-space: nowrap;
+}
+
+.month-list {
+  display: inline-flex;
+  padding: 0 20rpx;
+}
+
+.month-item {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 80rpx;
+  height: 60rpx;
+  margin-right: 16rpx;
+  border-radius: 30rpx;
+  font-size: 28rpx;
+  color: #666666;
+  background-color: #ffffff;
+  transition: all 0.2s;
+}
+
+.month-item:last-child {
+  margin-right: 0;
+}
+
+.month-item.active {
+  background-color: #4CAF50;
+  color: #ffffff;
+}

@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "province-picker": "/components/province-picker/province-picker",
+    "crop-card": "/components/crop-card/crop-card"
+  },
+  "navigationBarTitleText": "种菜助手"
+}

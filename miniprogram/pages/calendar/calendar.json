@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "province-picker": "/components/province-picker/province-picker",
+    "month-picker": "/components/month-picker/month-picker",
+    "crop-card": "/components/crop-card/crop-card"
+  },
+  "navigationBarTitleText": "种植日历"
+}

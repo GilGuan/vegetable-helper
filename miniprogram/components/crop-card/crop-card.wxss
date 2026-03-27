@@ -1,0 +1,60 @@
+.crop-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 16rpx;
+  padding: 24rpx;
+  margin-bottom: 20rpx;
+  box-shadow: 0 2rpx 8rpx rgba(0, 0, 0, 0.1);
+}
+
+.crop-icon-wrapper {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 12rpx;
+  background-color: #f5f5f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 24rpx;
+  flex-shrink: 0;
+}
+
+.crop-icon {
+  width: 80rpx;
+  height: 80rpx;
+}
+
+.crop-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.crop-name {
+  font-size: 32rpx;
+  font-weight: 500;
+  color: #333333;
+  margin-bottom: 8rpx;
+}
+
+.crop-category {
+  font-size: 24rpx;
+  color: #81C784;
+  margin-bottom: 8rpx;
+}
+
+.crop-detail {
+  margin-bottom: 8rpx;
+}
+
+.crop-months {
+  font-size: 24rpx;
+  color: #666666;
+}
+
+.crop-difficulty {
+  font-size: 24rpx;
+  color: #999999;
+}

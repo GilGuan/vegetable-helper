@@ -1,0 +1,93 @@
+.container {
+  min-height: 100vh;
+  background-color: #FFF8E1;
+}
+
+.section {
+  background-color: #ffffff;
+  margin: 20rpx;
+  border-radius: 16rpx;
+  padding: 30rpx;
+  box-shadow: 0 2rpx 8rpx rgba(0, 0, 0, 0.1);
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20rpx;
+}
+
+.section-title {
+  font-size: 32rpx;
+  font-weight: 500;
+  color: #333333;
+}
+
+.view-more {
+  font-size: 24rpx;
+  color: #4CAF50;
+}
+
+.crop-list {
+  margin-top: 10rpx;
+}
+
+.loading {
+  text-align: center;
+  padding: 40rpx 0;
+  color: #999999;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 40rpx 0;
+  color: #999999;
+}
+
+/* 快速入口 */
+.quick-links {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20rpx;
+}
+
+.quick-link-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20rpx;
+}
+
+.quick-link-icon {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 20rpx;
+  background-color: #81C784;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48rpx;
+  margin-bottom: 16rpx;
+}
+
+.quick-link-name {
+  font-size: 24rpx;
+  color: #333333;
+}
+
+/* 小贴士 */
+.tips-section {
+  background-color: #E8F5E9;
+}
+
+.tips-content {
+  padding: 10rpx 0;
+}
+
+.tip-item {
+  padding: 10rpx 0;
+  font-size: 26rpx;
+  color: #666666;
+  line-height: 1.6;
+}

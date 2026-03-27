@@ -1,0 +1,67 @@
+<view class="container">
+  <!-- 状态筛选 -->
+  <view class="filter-bar">
+    <view 
+      class="filter-item {{statusFilter === item.value ? 'active' : ''}}" 
+      wx:for="{{filters}}" 
+      wx:key="value" 
+      data-status="{{item.value}}"
+      bindtap="onFilterTap"
+    >
+      {{item.label}}
+    </view>
+  </view>
+
+  <!-- 种植列表 -->
+  <view class="planting-list" wx:if="{{!loading && plantings.length > 0}}">
+    <view class="planting-card" wx:for="{{plantings}}" wx:key="_id">
+      <view class="planting-header">
+        <view class="crop-info">
+          <image class="crop-icon" src="{{item.cropIcon}}" mode="aspectFit" />
+          <view class="crop-text">
+            <text class="crop-name">{{item.cropName}}</text>
+            <text class="planting-date">种植日期: {{item.startDate}}</text>
+          </view>
+        </view>
+        <view class="growth-badge">
+          <text class="growth-days">{{item.growthDays}}天</text>
+        </view>
+      </view>
+      
+      <view class="planting-actions">
+        <button 
+          class="action-btn record-btn" 
+          data-planting="{{item}}"
+          bindtap="onRecordTap"
+        >
+          记录打理
+        </button>
+        <button 
+          class="action-btn detail-btn" 
+          data-planting="{{item}}"
+          bindtap="onDetailTap"
+        >
+          查看详情
+        </button>
+      </view>
+    </view>
+  </view>
+
+  <!-- 加载状态 -->
+  <view class="loading" wx:if="{{loading}}">
+    <text>加载中...</text>
+  </view>
+
+  <!-- 空状态 -->
+  <view class="empty-state" wx:if="{{!loading && plantings.length === 0}}">
+    <view class="empty-icon">🌱</view>
+    <text class="empty-title">还没有种植任何作物</text>
+    <text class="empty-hint">去种植日历看看吧</text>
+    <button class="empty-btn" bindtap="onAddPlant">去看看</button>
+  </view>
+
+  <!-- 添加按钮 -->
+  <view class="add-btn" wx:if="{{!loading && plantings.length > 0}}" bindtap="onAddPlant">
+    <text>+</text>
+  </view>
+</view>

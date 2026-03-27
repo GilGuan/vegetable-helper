@@ -1,0 +1,30 @@
+.province-picker {
+  padding: 20rpx 30rpx;
+  background-color: #ffffff;
+}
+
+.location-bar {
+  display: flex;
+  align-items: center;
+}
+
+.location-icon {
+  font-size: 32rpx;
+  margin-right: 10rpx;
+}
+
+.province-text {
+  font-size: 28rpx;
+  color: #333333;
+  margin-right: 10rpx;
+}
+
+.arrow {
+  font-size: 20rpx;
+  color: #999999;
+}
+
+picker {
+  display: flex;
+  align-items: center;
+}

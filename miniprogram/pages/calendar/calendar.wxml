@@ -1,0 +1,55 @@
+<view class="container">
+  <!-- 省份选择 -->
+  <province-picker 
+    current-province="{{province}}" 
+    bind:change="onProvinceChange"
+  />
+
+  <!-- 月份选择 -->
+  <view class="month-section">
+    <month-picker 
+      selected="{{selectedMonth}}" 
+      bind:change="onMonthChange"
+    />
+  </view>
+
+  <!-- 分类筛选 -->
+  <view class="category-filter">
+    <scroll-view scroll-x class="scroll-view">
+      <view class="category-list">
+        <view 
+          class="category-item {{category === item.value ? 'active' : ''}}" 
+          wx:for="{{categories}}" 
+          wx:key="value" 
+          data-category="{{item.value}}"
+          bindtap="onCategoryTap"
+        >
+          {{item.label}}
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+
+  <!-- 作物列表 -->
+  <view class="crop-section">
+    <view class="crop-list" wx:if="{{!loading && crops.length > 0}}">
+      <crop-card 
+        wx:for="{{crops}}" 
+        wx:key="_id" 
+        crop="{{item}}" 
+        province="{{province}}"
+        bind:tap="onCropTap"
+      />
+    </view>
+
+    <view class="loading" wx:if="{{loading}}">
+      <text>加载中...</text>
+    </view>
+
+    <view class="empty-state" wx:if="{{!loading && crops.length === 0}}">
+      <view class="empty-icon">🌱</view>
+      <text>暂无适合的作物</text>
+      <text class="empty-hint">试试切换月份或分类</text>
+    </view>
+  </view>
+</view>

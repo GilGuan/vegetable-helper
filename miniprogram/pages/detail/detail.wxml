@@ -1,0 +1,86 @@
+<view class="container">
+  <view class="loading" wx:if="{{loading}}">
+    <text>加载中...</text>
+  </view>
+
+  <block wx:if="{{!loading && crop}}">
+    <!-- 作物信息 -->
+    <view class="crop-header">
+      <view class="crop-icon-wrapper">
+        <image class="crop-icon" src="{{crop.icon}}" mode="aspectFit" />
+      </view>
+      <view class="crop-info">
+        <text class="crop-name">{{crop.name}}</text>
+        <text class="crop-category">{{crop.category}}</text>
+      </view>
+    </view>
+
+    <view class="info-cards">
+      <view class="info-card">
+        <text class="info-label">生长周期</text>
+        <text class="info-value">{{crop.growthCycle}}天</text>
+      </view>
+      <view class="info-card">
+        <text class="info-label">种植难度</text>
+        <text class="info-value">{{crop.difficulty}}</text>
+      </view>
+      <view class="info-card">
+        <text class="info-label">适宜月份</text>
+        <text class="info-value">{{monthText}}</text>
+      </view>
+    </view>
+
+    <!-- 种植步骤 -->
+    <view class="section" wx:if="{{crop.steps && crop.steps.length > 0}}">
+      <view class="section-title">📋 种植步骤</view>
+      <view class="steps-container">
+        <view 
+          class="step-item {{activeStepIndex === index ? 'active' : ''}}" 
+          wx:for="{{crop.steps}}" 
+          wx:key="order"
+          data-index="{{index}}"
+          bindtap="onStepTap"
+        >
+          <view class="step-header">
+            <view class="step-number">{{item.order}}</view>
+            <text class="step-title">{{item.title}}</text>
+          </view>
+          <view class="step-content" wx:if="{{activeStepIndex === index}}">
+            <text class="step-desc">{{item.description}}</text>
+            <text class="step-duration">⏱ 预计 {{item.duration}} 天</text>
+            <view class="step-tips" wx:if="{{item.tips && item.tips.length > 0}}">
+              <text class="tips-title">注意事项:</text>
+              <text class="tip-item" wx:for="{{item.tips}}" wx:key="*this" wx:for-item="tip">• {{tip}}</text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <!-- 注意事项 -->
+    <view class="section" wx:if="{{crop.tips && crop.tips.length > 0}}">
+      <view class="section-title">⚠️ 注意事项</view>
+      <view class="tips-list">
+        <view class="tip-item" wx:for="{{crop.tips}}" wx:key="*this">
+          <text>• {{item}}</text>
+        </view>
+      </view>
+    </view>
+
+    <!-- 常见问题 -->
+    <view class="section" wx:if="{{crop.faqs && crop.faqs.length > 0}}">
+      <view class="section-title">❓ 常见问题</view>
+      <view class="faq-list">
+        <view class="faq-item" wx:for="{{crop.faqs}}" wx:key="question">
+          <text class="faq-question">Q: {{item.question}}</text>
+          <text class="faq-answer">A: {{item.answer}}</text>
+        </view>
+      </view>
+    </view>
+
+    <!-- 底部按钮 -->
+    <view class="bottom-bar">
+      <button class="plant-btn" bindtap="onStartPlant">开始种植</button>
+    </view>
+  </block>
+</view>
